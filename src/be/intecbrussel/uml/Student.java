@@ -9,6 +9,8 @@ public class Student {
 
     public Student(String name) {
         this.name = name;
+        studentId=numberOfStudents+1;
+        numberOfStudents++;
     }
 
     public int getStudentId() {
