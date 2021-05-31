@@ -30,5 +30,6 @@ public class ReportCard {
         }
         return average;
     }
+
 }
 
