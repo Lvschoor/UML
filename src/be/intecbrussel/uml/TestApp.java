@@ -9,11 +9,10 @@ public class TestApp {
         Student[] students = new Student[14];
 
         for (int i = 0; i < students.length; i++) {
-
-            students[i] = new Student(generateStudent());
+            students[i] = new Student(generateRandomStudentName());
         }
-        javaIot.setStudents(students);
 
+        javaIot.setStudents(students);
         javaIot.printListOfStudentNames();
 
         for (int i =0; i<students.length;i++){
@@ -24,7 +23,7 @@ public class TestApp {
     }
 
 
-    public static String generateStudent() {
+    public static String generateRandomStudentName() {
         char[] letters = new char[6];
         String str;
         Random random = new Random();
