@@ -2,7 +2,7 @@ package be.intecbrussel.uml;
 
 public class ClassRoom {
 
-    private Student[] students;
+    private Student[] students = new Student[14];
     private String nameOfClass;
 
     public ClassRoom(String nameOfClass) {
@@ -26,15 +26,32 @@ public class ClassRoom {
     }
 
     public void addStudent(Student student) {
+        for (int i = 0; i < students.length; i++) {
+            if (students[i] == null) {
+                students[i] = student;
+            }
+        }
 
     }
 
     public double getClassAverageGrade() {
         double average = 0;
+        for (int i = 0; i < students.length; i++) {
+            if (students[i] != null) {
+                average += students[i].getReportCard().getAverageGrade();
+            }
+        }
+        average /= Student.numberOfStudents;
         return average;
     }
 
     public void printListOfStudentNames() {
+        for (Student student : students) {
+            if (student.getName() != null) {
+                System.out.println(student.getName());
+            }
+        }
+
 
     }
 }
