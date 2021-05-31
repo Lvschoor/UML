@@ -19,8 +19,10 @@ public class TestApp {
         for (int i =0; i<students.length;i++){
             javaIot.getStudents()[i].getReportCard().addGrade(generateGrade());
         }
+        System.out.printf("Average class grade: %.2f",javaIot.getClassAverageGrade());
 
     }
+
 
     public static String generateStudent() {
         char[] letters = new char[6];

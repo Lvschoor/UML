@@ -4,7 +4,7 @@ public class Student {
 
     private int studentId;
     private String name;
-    private ReportCard reportCard;
+    private ReportCard reportCard =new ReportCard();
     private static int numberOfStudents;
 
     public Student(String name) {
