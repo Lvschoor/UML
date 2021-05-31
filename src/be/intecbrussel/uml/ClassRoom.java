@@ -36,12 +36,14 @@ public class ClassRoom {
 
     public double getClassAverageGrade() {
         double average = 0;
+        int counter = 0;
         for (int i = 0; i < students.length; i++) {
             if (students[i] != null) {
                 average += students[i].getReportCard().getAverageGrade();
+                counter++;
             }
         }
-        average /= Student.numberOfStudents;
+        average /= counter;
         return average;
     }
 
