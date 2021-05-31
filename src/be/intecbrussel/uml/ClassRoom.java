@@ -29,9 +29,9 @@ public class ClassRoom {
         for (int i = 0; i < students.length; i++) {
             if (students[i] == null) {
                 students[i] = student;
+                break;
             }
         }
-
     }
 
     public double getClassAverageGrade() {
@@ -43,17 +43,17 @@ public class ClassRoom {
                 counter++;
             }
         }
-        average /= counter;
+        if (counter != 0) {
+            average /= counter;
+        } else average = 0;
         return average;
     }
 
     public void printListOfStudentNames() {
         for (Student student : students) {
-            if (student.getName() != null) {
+            if (student != null) {
                 System.out.println(student.getName());
             }
         }
-
-
     }
 }
