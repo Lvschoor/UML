@@ -9,7 +9,7 @@ public class Student {
 
     public Student(String name) {
         this.name = name;
-        studentId=numberOfStudents+1;
+        studentId=numberOfStudents+1; //starting with id 1
         numberOfStudents++;
     }
 

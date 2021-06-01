@@ -19,6 +19,7 @@ public class TestApp {
             javaIot.getStudents()[i].getReportCard().addGrade(generateGrade());
         }
         System.out.printf("Average class grade: %.2f",javaIot.getClassAverageGrade());
+        System.out.println("\nGrade 1 for student "+javaIot.getStudents()[1].getReportCard().getGrades()[1]);
 
     }
 

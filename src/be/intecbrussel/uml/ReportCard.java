@@ -14,6 +14,7 @@ public class ReportCard {
         for (int i = 0; i < grades.length; i++) {
             if (grades[i] == 0) {
                 grades[i] = grade;
+                break;
             }
         }
     }

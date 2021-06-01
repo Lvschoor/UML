@@ -50,10 +50,10 @@ public class ClassRoom {
     }
 
     public void printListOfStudentNames() {
-        System.out.println("List of students of class "+this.nameOfClass+": ");
+        System.out.println("List of students of class "+nameOfClass+": ");
         for (Student student : students) {
             if (student != null) {
-                System.out.println(student.getName());
+                System.out.println(student.getName()+ "has id-number: "+ student.getStudentId());
             }
         }
     }
